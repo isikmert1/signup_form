@@ -1,0 +1,291 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    line-height: 1.6;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.2;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* CSS Start */
+
+@font-face {
+    font-family: "Norse Bold";
+    src: url("./Norse-Bold.otf");
+}
+
+* {
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    min-height: 100%;
+}
+
+.bg-section {
+    background-position: center center;
+    background-image: url("./images/halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: cover;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.5rem;
+    margin-top: 25%;
+    font-family: "Norse Bold";
+    padding: 16px 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.banner img {
+    height: 125px;
+}
+
+.banner h2{
+    margin: 0;
+}
+
+.attribution {
+    font-size: 0.9rem;
+}
+
+.main-content-section {
+    display: flex;
+    flex: 5;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9fafb;
+}
+
+.para-container {
+    padding-bottom: 3rem;
+}
+
+.main-para {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0.5rem 3rem;
+}
+
+.input-section {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0 3rem;
+
+}
+
+.form-header-para {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 1rem 0;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-line {
+    display: flex;
+    gap: 5.25rem;
+}
+
+.input-line label {
+    display: block;
+}
+
+.input-line input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input.focus {
+    border: 1px solid blue;
+    box-shadow: 2px 1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+input.error {
+    border: 1px solid red;
+}
+
+.error-message {
+    margin-top: 0;
+    font-size: 0.8rem;
+    color: red;
+}
+
+.signup-button {
+    border: none;
+    background-color: #596D48;
+    padding: 0.8rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: 2rem 3rem;
+}
+
+.signup-button:hover {
+    background-color: #4C5A3F;
+}
+
+.signup-button:active {
+    background-color: #3E4A33;
+}
+
+p.log-in {
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0 3rem;
+}
+
+.log-in a {
+    color: #596D48;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.log-in a:hover {
+    text-decoration: underline;
+    color: #4C5A3F;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bg-section {
+        padding: 4rem 0;
+        gap: 1rem;
+    }
+
+    div.banner {
+        margin: 0;
+    }
+
+    .para-container {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .signup-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .input-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .signup-button {
+        margin: 1rem 0;
+        margin-inline: auto;
+    }
+
+    p.log-in {
+        text-align: center;
+        padding: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    
+    .input-line {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
